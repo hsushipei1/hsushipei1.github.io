@@ -2,7 +2,7 @@
 alias git="~/miniconda2/bin/git"
 
 echo "===== start -> gitpush_after_imgupd.bash ===="  
-git add .
+git add --all
 git commit -m "Weather map update commit"
 git push -u origin master
 echo "===== gitpush_after_imgupd.bash -> end ===="
