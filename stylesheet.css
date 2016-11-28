@@ -1,3 +1,7 @@
 #wmaps img {
-	width: 50%;
+	width: 600px;
+}
+
+#maintinfo {
+	font-family: "Verdana";
 }
