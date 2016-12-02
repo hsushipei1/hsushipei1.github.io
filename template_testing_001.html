@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>SCSTIMAX Weather condition Display System_Testing</title>
+	<!--MDL-->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.indigo-pink.min.css">
+	<!--semantic-ui-->
+	<link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
+	<!--myself-->
+	<link rel="stylesheet" type="text/css" href="./template_testing_001.css">
+</head>
+<body>
+
+<!-- Simple header with scrollable tabs. -->
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+		<header class="mdl-layout__header">
+	   	<div class="mdl-layout__header-row">
+ 		<!-- Title -->
+  			<span class="mdl-layout-title">SCSTIMAX Weather condition Display System_Testing</span>
+		</div>
+		<!-- Tabs START-->
+	    <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
+	        <a href="#scroll-tab-1" class="mdl-layout__tab is-active">Satellite Image</a>
+	        <a href="#scroll-tab-2" class="mdl-layout__tab">NCEP FNL</a>
+	        <a href="#scroll-tab-3" class="mdl-layout__tab">NCEP GFS</a>
+	        <a href="#scroll-tab-4" class="mdl-layout__tab">Tab 4</a>
+	        <a href="#scroll-tab-5" class="mdl-layout__tab">Tab 5</a>
+	        <a href="#scroll-tab-6" class="mdl-layout__tab">Tab 6</a>
+	    </div>
+		</header>
+		<!--<div class="mdl-layout__drawer">
+			<span class="mdl-layout-title">Title</span>
+		</div>-->
+		<main class="mdl-layout__content">
+    	<section class="mdl-layout__tab-panel is-active" id="scroll-tab-1">
+      		<div class="page-content"><!-- Your content of tab 1 goes here -->
+				<div class="mdl-grid"><!--Grid Start-->
+					<div class="mdl-cell mdl-cell--2-col"><!--Left menu-->
+						<ul>
+							<li><a href="#EAIR">East Asia IR</a></li>
+							<li><a href="#EAVIS">East Asia VIS</a></li>
+						</ul>
+					</div>
+					<div class="mdl-cell mdl-cell--10-col"><!--Main content-->
+						<div class="img myactive" id="EAIR">
+							<img src="http://opendata.cwb.gov.tw/opendata/MSC/O-B0030-002.jpg">
+						</div>
+						<div class="img" id="EAVIS">
+							<img src="http://opendata.cwb.gov.tw/opendata/MSC/O-B0031-002.jpg">
+						</div>
+					</div>
+				</div>		
+      		</div><!-- Your content of tab 1 ends here -->
+    	</section>
+    	<section class="mdl-layout__tab-panel" id="scroll-tab-2">
+      		<div class="page-content"><!-- Your content goes here --></div>
+    	</section>
+    	<section class="mdl-layout__tab-panel" id="scroll-tab-3">
+    		<div class="page-content"><!-- Your content goes here --></div>
+    	</section>
+    	<section class="mdl-layout__tab-panel" id="scroll-tab-4">
+    		<div class="page-content"><!-- Your content goes here --></div>
+    	</section>
+    	<section class="mdl-layout__tab-panel" id="scroll-tab-5">
+    		<div class="page-content"><!-- Your content goes here --></div>
+	    </section>
+	    <section class="mdl-layout__tab-panel" id="scroll-tab-6">
+    		<div class="page-content"><!-- Your content goes here --></div>
+	    </section>
+		</main>
+</div>
+
+
+
+	<!--MDL-->
+	<script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+	<!--semantic-ui-->
+	<script src="semantic/dist/semantic.min.js"></script>
+	<!--myself-->
+	<script src="./myactive.js"></script>
+</body>
+</html>
