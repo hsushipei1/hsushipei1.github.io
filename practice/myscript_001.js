@@ -10,3 +10,7 @@ var EAIR_btn_show = function() {
 var EAVIS_btn_show = function() {
 	document.getElementById("satel").src = "http://opendata.cwb.gov.tw/opendata/MSC/O-B0031-002.jpg";
 }
+
+var printword = function() {
+	console.log("Hello");
+}

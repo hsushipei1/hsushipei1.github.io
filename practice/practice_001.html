@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<title>Document</title>
 	<link rel="stylesheet" type="text/css" href="Semantic-UI-CSS-master/semantic.min.css">
+	<link rel="stylesheet" type="text/css" href="stylesheet.css">
 </head>
 <body>
 	<p id="hello">Hello world!</p>
@@ -13,12 +14,13 @@
 	</button>
 	<!--Button with hyperlink to GOOGLE-->
 	<a href="http://google.com" class="ui primary button">GOOGLE</a>
+	<div class="ui divider"></div>
 	<div class="ui grid">
 		<div class="three wide column">
-			<ul>
-				<button class="ui primary button" onClick="">East Asia VIS</button>
-				<li>East Asia IR</li>
-			</ul>
+			<div class="ui vertical buttons">
+				<button class="ui button" onClick="EAIR_btn_show()">East Asia IR</button>
+				<button class="ui button" onClick="EAVIS_btn_show()">East Asia VIS</button>
+			</div>
 		</div>
 		<div class="thirteen wide column">
 			<img id="satel" src="http://opendata.cwb.gov.tw/opendata/MSC/O-B0030-002.jpg" />
@@ -26,8 +28,7 @@
 	</div>
 
 
-	<script src="semantic/dist/semantic.min.js"></script>
+	<script src="Semantic-UI-CSS-master/semantic.min.js"></script>
 	<script src="myscript_001.js"></script>
-
 </body>
 </html>
