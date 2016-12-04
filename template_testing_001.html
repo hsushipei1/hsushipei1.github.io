@@ -37,17 +37,17 @@
     	<section class="mdl-layout__tab-panel is-active" id="scroll-tab-1">
       		<div class="page-content"><!-- Your content of tab 1 goes here -->
 				<div class="mdl-grid"><!--Grid Start-->
-					<div class="mdl-cell mdl-cell--2-col"><!--Left menu-->
+					<div class="mdl-cell mdl-cell--2-col img_menu"><!--Left menu-->
 						<ul>
-							<li><a href="#EAIR">East Asia IR</a></li>
+							<li><a href="#EAIR" onclick="activate(this);">East Asia IR</a></li>
 							<li><a href="#EAVIS">East Asia VIS</a></li>
 						</ul>
 					</div>
-					<div class="mdl-cell mdl-cell--10-col"><!--Main content-->
-						<div class="img myactive" id="EAIR">
+					<div class="mdl-cell mdl-cell--10-col img_displayer"><!--Main content-->
+						<div class="img_container myactive" id="EAIR">
 							<img src="http://opendata.cwb.gov.tw/opendata/MSC/O-B0030-002.jpg">
 						</div>
-						<div class="img" id="EAVIS">
+						<div class="img_container" id="EAVIS">
 							<img src="http://opendata.cwb.gov.tw/opendata/MSC/O-B0031-002.jpg">
 						</div>
 					</div>
