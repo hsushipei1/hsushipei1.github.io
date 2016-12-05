@@ -2,17 +2,17 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>SCSTIMAX Weather condition Display System_Testing</title>
 	<!--MDL-->
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 	<link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.indigo-pink.min.css">
 	<!--semantic-ui-->
-	<link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
+	<link rel="stylesheet" type="text/css" href="semantic.min.css">
 	<!--myself-->
-	<link rel="stylesheet" type="text/css" href="./template_testing_001.css">
+	<link rel="stylesheet" type="text/css" href="template_testing_001.css">
 </head>
 <body>
-<!-- 123 -->
 <!-- Simple header with scrollable tabs. -->
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
 		<header class="mdl-layout__header">
@@ -34,14 +34,20 @@
 			<span class="mdl-layout-title">Title</span>
 		</div>-->
 		<main class="mdl-layout__content">
+		<!-- Tab 1 content starts -->
     	<section class="mdl-layout__tab-panel is-active" id="scroll-tab-1">
-      		<div class="page-content"><!-- Your content of tab 1 goes here -->
-				<div class="mdl-grid"><!--Grid Start-->
+      		<div class="page-content">
+      			<!--Grid Start-->
+				<div class="mdl-grid">
 					<div class="mdl-cell mdl-cell--2-col"><!--Left menu-->
-						<ul>
-							<li><a href="#EAIR">East Asia IR</a></li>
-							<li><a href="#EAVIS">East Asia VIS</a></li>
-						</ul>
+						<div class="ui vertical buttons">
+							<button class="ui button" onClick="EAIR_btn_show()">East Asia IR</button></br>
+							<button class="ui button" onClick="EAVIS_btn_show()">East Asia VIS</button></br>
+							<button class="ui button" onClick="">Taiwan IR</button></br>
+							<button class="ui button" onClick="">Taiwan VIS</button></br>
+							<button class="ui button" onClick="">Eastern Hemi IR</button></br>
+							<button class="ui button" onClick="">Eastern Hemi VIS</button>
+						</div>
 					</div>
 					<div class="mdl-cell mdl-cell--10-col"><!--Main content-->
 						<div class="img myactive" id="EAIR">
@@ -51,24 +57,99 @@
 							<img src="http://opendata.cwb.gov.tw/opendata/MSC/O-B0031-002.jpg">
 						</div>
 					</div>
-				</div>		
-      		</div><!-- Your content of tab 1 ends here -->
+				</div>
+				<!--Grid ends-->		
+      		</div>
     	</section>
+    	<!-- Tab 1 content ends -->
+    	<!-- Tab 2 content starts -->
     	<section class="mdl-layout__tab-panel" id="scroll-tab-2">
-      		<div class="page-content"><!-- Your content goes here --></div>
+      		<div class="page-content">
+      			<!--Grid Start-->
+				<div class="mdl-grid">
+					<div class="mdl-cell mdl-cell--2-col"><!--Left menu-->
+						<div>
+							<p style="font-size: 20px">WNP</p>
+							<div class="ui vertical buttons">
+						    <button class="ui button" onClick="">1000mb</button></br>
+							<button class="ui button" onClick="">850mb</button></br>
+							<button class="ui button" onClick="">500mb</button></br>
+							<button class="ui button" onClick="">200mb</button>
+						    </div>
+						</div>
+						<div>
+							<p style="font-size: 20px">SCS</p>
+							<div class="ui vertical buttons">
+							<button class="ui button" onClick="">1000mb</button></br>
+							<button class="ui button" onClick="">850mb</button></br>
+						    </div>
+						</div>
+					</div>
+					<div class="mdl-cell mdl-cell--10-col"><!--Main content-->
+						<img src="./weather_maps/NcepFnl025.WNP.100000.latest.jpg" />
+						<img src="./weather_maps/NcepFnl025.WNP.85000.latest.jpg" />
+						<img src="./weather_maps/NcepFnl025.WNP.50000.latest.jpg" />
+						<img src="./weather_maps/NcepFnl025.WNP.20000.latest.jpg" />
+						<img src="./weather_maps/NcepFnl025.SCS.100000.latest.jpg" />
+						<img src="./weather_maps/NcepFnl025.SCS.85000.latest.jpg" />
+					</div>
+				</div>
+				<!--Grid ends-->
+      		</div>
     	</section>
+    	<!-- Tab 2 content ends -->
+    	<!-- Tab 3 content starts -->
     	<section class="mdl-layout__tab-panel" id="scroll-tab-3">
-    		<div class="page-content"><!-- Your content goes here --></div>
+    		<div class="page-content">
+    			<!--Grid Start-->
+				<div class="mdl-grid">
+					<div class="mdl-cell mdl-cell--2-col"><!--Left menu-->
+						<div>
+							<p style="font-size: 20px">WNP</p>
+							<div class="ui vertical buttons">
+						    <button class="ui button" onClick="">1000mb</button></br>
+							<button class="ui button" onClick="">850mb</button></br>
+							<button class="ui button" onClick="">500mb</button></br>
+							<button class="ui button" onClick="">200mb</button>
+						    </div>
+						</div>
+						<div>
+							<p style="font-size: 20px">SCS</p>
+							<div class="ui vertical buttons">
+							<button class="ui button" onClick="">1000mb</button></br>
+							<button class="ui button" onClick="">850mb</button></br>
+						    </div>
+						</div>
+					</div>
+					<div class="mdl-cell mdl-cell--10-col"><!--Main content-->
+						<img src="./weather_maps/NCEPGFS025.SCS.1000.pw.slp.wind.latest-0.jpg" />
+						<img src="./weather_maps/NCEPGFS025.SCS.1000.ws.ws.wind.latest-0.jpg" />
+						<img src="./weather_maps/NCEPGFS025.SCS.850.t.geoh.wind.latest-0.jpg" />
+						<img src="./weather_maps/NCEPGFS025.WNP.1000.pw.slp.wind.latest-0.jpg" />
+						<img src="./weather_maps/NCEPGFS025.WNP.850.t.geoh.wind.latest-0.jpg" />
+						<img src="./weather_maps/NCEPGFS025.WNP.500.vor.geoh.wind.latest-0.jpg" />
+						<img src="./weather_maps/NCEPGFS025.WNP.200.ws.geoh.wind.latest-0.jpg" />
+					</div>
+				</div>
+				<!--Grid ends-->
+    		</div>
     	</section>
+    	<!-- Tab 3 content ends -->
+    	<!-- Tab 4 content starts -->
     	<section class="mdl-layout__tab-panel" id="scroll-tab-4">
     		<div class="page-content"><!-- Your content goes here --></div>
     	</section>
+    	<!-- Tab 4 content ends -->
+    	<!-- Tab 5 content starts -->
     	<section class="mdl-layout__tab-panel" id="scroll-tab-5">
     		<div class="page-content"><!-- Your content goes here --></div>
 	    </section>
+	    <!-- Tab 5 content ends -->
+	    <!-- Tab 6 content starts -->
 	    <section class="mdl-layout__tab-panel" id="scroll-tab-6">
     		<div class="page-content"><!-- Your content goes here --></div>
 	    </section>
+	    <!-- Tab 6 content ends -->
 		</main>
 </div>
 
@@ -77,8 +158,8 @@
 	<!--MDL-->
 	<script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
 	<!--semantic-ui-->
-	<script src="semantic/dist/semantic.min.js"></script>
+	<script src="semantic.min.js"></script>
 	<!--myself-->
-	<script src="./myactive.js"></script>
+	<script src="template_testing_001.js"></script>
 </body>
 </html>
